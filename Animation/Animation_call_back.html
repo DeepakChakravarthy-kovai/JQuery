@@ -1,0 +1,34 @@
+<html>
+	
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+   var hidden = false;
+   $("button").click(function(){
+      if(hidden){
+         $("p").show("slow",function(){
+         hidden = false;
+         alert("Showing the hidden paragraph");
+      });
+      }else{
+         $("p").hide("slow",function(){
+         hidden = true;
+         alert("The paragraph is now hidden");
+      });
+      }
+      
+   });
+});
+</script>
+</head>
+
+<body>
+	<button>Show/Hide</button>
+
+<p>Hi DeepakChakravarthy!!!!!</p>
+
+</body>
+
+</html>

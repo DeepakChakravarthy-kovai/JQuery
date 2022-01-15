@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var hidden = false;
+        $("button").click(function () {
+          if (hidden) {
+            hidden = false;
+            $("#div3").fadeIn();
+            $("#div2").fadeIn("slow");
+            $("#div1").fadeIn(2000);
+          } else {
+            hidden = true;
+            $("#div3").fadeOut();
+            $("#div2").fadeOut("slow");
+            $("#div1").fadeOut(2000);
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>Demonstrate faceIn()/fadeOut() with different parameters.</p>
+
+    <button>Click to fade in/out boxes</button><br /><br />
+
+    <div
+      id="div1"
+      style="width: 80px; height: 80px; background-color: rgb(0, 255, 76)"
+    ></div>
+    <br />
+    <div
+      id="div2"
+      style="width: 80px; height: 80px; background-color: rgb(0, 41, 128)"
+    ></div>
+    <br />
+    <div
+      id="div3"
+      style="width: 80px; height: 80px; background-color: rgb(255, 0, 140)"
+    ></div>
+  </body>
+</html>
